@@ -1,6 +1,7 @@
 import { Stack } from "./stack.js";
 import { Queue } from "./queue.js";
 import { HashTable } from "./hashtable.js";
+import { LinkedList } from "./linkedlist.js";
 
 const stack = new Stack();
 stack.push(2);
@@ -33,3 +34,15 @@ hashtable.setItem("weight(kg)", "90");
 hashtable.setItem("level(1-4)", 3);
 hashtable.setItem("gender(M/F)", "M");
 console.log(hashtable.table);
+
+const linkedList = new LinkedList();
+linkedList.insert("A", "root");
+linkedList.insert("B", "A");
+linkedList.insert("C", "B");
+linkedList.print();
+linkedList.remove("B");
+linkedList.print();
+linkedList.append("D");
+linkedList.print();
+linkedList.append("E");
+linkedList.print();
