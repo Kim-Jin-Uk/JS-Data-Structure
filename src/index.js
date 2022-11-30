@@ -2,6 +2,7 @@ import { Stack } from "./stack.js";
 import { Queue } from "./queue.js";
 import { HashTable } from "./hashtable.js";
 import { LinkedList } from "./linkedlist.js";
+import { DoublyLinkedList } from "./doubly-linked-list.js";
 
 const stack = new Stack();
 stack.push(2);
@@ -46,3 +47,15 @@ linkedList.append("D");
 linkedList.print();
 linkedList.append("E");
 linkedList.print();
+
+const doublyLinkedList = new DoublyLinkedList();
+doublyLinkedList.insert("A", "root");
+doublyLinkedList.insert("B", "A");
+doublyLinkedList.insert("C", "B");
+doublyLinkedList.print();
+doublyLinkedList.remove("B");
+doublyLinkedList.print();
+doublyLinkedList.append("D");
+doublyLinkedList.print();
+doublyLinkedList.append("E");
+doublyLinkedList.print();
