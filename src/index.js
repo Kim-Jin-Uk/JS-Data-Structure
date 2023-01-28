@@ -2,6 +2,7 @@ import { bubble } from "./sort/bubble.js";
 import { insertion } from "./sort/insertion.js";
 import { selection } from "./sort/selection.js";
 import { quick } from "./sort/quick.js";
+import { mergeSort } from "./sort/merge.js";
 
 const t1 = new Date();
 const data1 = [1, 5, 4, 3, 6, 7, 9, 2, 0, 8];
@@ -22,3 +23,8 @@ const t4 = new Date();
 const data4 = [1, 5, 4, 3, 6, 7, 9, 2, 0, 8];
 for (let i = 0; i < 1000000; i++) quick(data4);
 console.log("quick => ", new Date() - t4);
+
+const t5 = new Date();
+const data5 = [1, 5, 4, 3, 6, 7, 9, 2, 0, 8];
+for (let i = 0; i < 1000000; i++) mergeSort(data5);
+console.log("merge => ", new Date() - t5);
